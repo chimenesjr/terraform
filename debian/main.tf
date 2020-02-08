@@ -1,7 +1,7 @@
 # https://github.com/HoussemDellai/Terraform-GCP/blob/master/vm-network/main.tf
 
 provider "google" {
-    credentials = "${file("../book-255910-cb84b5f5eb61.json")}"
+    credentials = "${file("../../secrets.json")}"
     project = "book-255910"
     region = "us-central1"
     zone = "us-central1-c"
