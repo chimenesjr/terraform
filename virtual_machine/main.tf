@@ -35,30 +35,3 @@ resource "google_compute_instance" "default" {
   }
 
 }
-
-resource "google_compute_disk" "desk" {
-  name = "test-desk"
-  type = "pd-ssd"
-  zone = "${var.zone}"
-  size = "10"
-}
-
-resource "google_compute_attached_disk" "default" {
-  disk = "${google_compute_disk.desk.self_link}"
-  instance = "${google_compute_instance.default.self_link}"
-}
-
-
-
-
-output "machine_type" {
-  value = "${google_compute_instance.default.machine_type}"
-}
-
-output "name" {
-  value = "${google_compute_instance.default.name}"
-}
-
-output "zone" {
-  value = "${google_compute_instance.default.zone}"
-}
