@@ -3,12 +3,11 @@
 Basic commands for terraform 11 using Google Cloud:
 
 - conditions
-- variables
+- variables, locals
 - provider
 - map
 - output
-- create vm
-- create network, firewall, tags
-- disks
+- create vm, network, firewall, tags, disks, images
 - depencies/order
 - array, length
+- startup script (powershell and bash)
